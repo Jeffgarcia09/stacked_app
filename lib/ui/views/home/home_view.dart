@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:stacked/stacked.dart';
 import 'package:stack_app/ui/common/app_colors.dart';
 import 'package:stack_app/ui/common/ui_helpers.dart';
+import 'package:stacked/stacked.dart';
 
 import 'home_viewmodel.dart';
 
@@ -59,7 +59,7 @@ class HomeView extends StackedView<HomeViewModel> {
                     ),
                     MaterialButton(
                       color: kcDarkGreyColor,
-                      onPressed: viewModel.showBottomSheet,
+                      onPressed: () => viewModel.navigateToUsersView(),
                       child: const Text(
                         'Show Bottom Sheet',
                         style: TextStyle(

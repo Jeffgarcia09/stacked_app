@@ -5,6 +5,7 @@ import 'package:stack_app/ui/views/startup/startup_view.dart';
 import 'package:stacked/stacked_annotations.dart';
 import 'package:stacked_services/stacked_services.dart';
 import 'package:stack_app/ui/views/users/users_view.dart';
+import 'package:stack_app/services/users_service.dart';
 // @stacked-import
 
 @StackedApp(
@@ -18,7 +19,8 @@ import 'package:stack_app/ui/views/users/users_view.dart';
     LazySingleton(classType: BottomSheetService),
     LazySingleton(classType: DialogService),
     LazySingleton(classType: NavigationService),
-    // @stacked-service
+    LazySingleton(classType: UsersService),
+// @stacked-service
   ],
   bottomsheets: [
     StackedBottomsheet(classType: NoticeSheet),
